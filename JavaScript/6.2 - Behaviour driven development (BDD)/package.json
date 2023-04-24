@@ -1,0 +1,16 @@
+{
+  "name": "calculator-bdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --format node_modules/cucumber-pretty"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cucumber": "^6.0.0",
+    "chai": "^4.2.0",
+    "cucumber-pretty": "^6.0.0"
+  }
+}
