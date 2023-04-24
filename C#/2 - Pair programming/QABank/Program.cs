@@ -30,4 +30,33 @@ public class BankAccount {
         Balance -= amount;
     }
 }
+public class CurrentAccount : BankAccount {
+    public decimal OverdraftLimit { get; set; }
 
+    public CurrentAccount(string customerName, decimal overdraftLimit = 0, int accountNumber = 0, decimal balance = 0)
+        : base(customerName, accountNumber, balance) {
+        OverdraftLimit = overdraftLimit;
+    }
+
+    public new void Withdraw(decimal amount) {
+        if (Balance + OverdraftLimit >= amount) {
+            Balance -= amount;
+        } else {
+            throw new Exception("Insufficient funds.");
+        }
+    }
+}
+
+public class SavingsAccount : BankAccount {
+    public decimal InterestRate { get; set; }
+
+    public SavingsAccount(string customerName, decimal interestRate, int accountNumber = 0, decimal balance = 0)
+        : base(customerName, accountNumber, balance) {
+        InterestRate = interestRate;
+    }
+
+    public void AddInterest() {
+        decimal interest = Balance * InterestRate / 100;
+        Balance += interest;
+    }
+}
