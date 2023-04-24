@@ -19,7 +19,11 @@ class Calculator {
         return new Error(`Invalid numbers supplied`);
       }
     }
+<<<<<<< HEAD
 
+=======
+    // changes by me
+>>>>>>> shared
     if (numbers[1] == 0) {
       return new Error(
         `0 supplied as the divisor - unable to complete calculation`,
