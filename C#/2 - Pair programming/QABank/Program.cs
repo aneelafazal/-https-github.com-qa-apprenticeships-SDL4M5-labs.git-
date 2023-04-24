@@ -4,6 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+<<<<<<< HEAD
+namespace QABank
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
+=======
 // Test
 public class BankAccount {
     private static int NextAccountNumber = 100000;
@@ -60,3 +71,4 @@ public class SavingsAccount : BankAccount {
         Balance += interest;
     }
 }
+>>>>>>> shared
